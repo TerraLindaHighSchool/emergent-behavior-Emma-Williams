@@ -11,7 +11,7 @@ public class Moth extends Animal
     // Characteristics shared by all moths (static fields).
 
     // The age to which a moth can live.
-    private static final int MAX_AGE = 10;
+    private static final int MAX_AGE = 8;
     // The age at which a moth can start to breed.
     private static final int BREEDING_AGE = 4;
     // The likelihood of a moth breeding (in percent).
