@@ -9,8 +9,8 @@ import java.util.Random;
 public class Food extends Actor
 {
     private GreenfootImage image;
-    private int crumbs = 130;
-    private int size = 70;
+    private int crumbs = 50;
+    private int size = 40;
     private int z;
     /**
      * Act - do whatever the Food wants to do. This method is called whenever
@@ -18,12 +18,12 @@ public class Food extends Actor
      */
     public void act() 
     { 
-        image = new GreenfootImage(size, size);
         updateImage();
     }    
     
     private void updateImage()
     {
+        image = new GreenfootImage(size, size);
         Random random = new Random();
         
        for(z = 0; z < crumbs; z++)
