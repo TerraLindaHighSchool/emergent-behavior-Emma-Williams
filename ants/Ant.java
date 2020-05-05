@@ -31,13 +31,13 @@ public class Ant extends Creature
     
     private void checkForFood()
     {
-       Food food = (Food) getOneIntersectingObject(Food.class);
-        if (carryingFood = true) 
+        Food food = (Food) getOneIntersectingObject(Food.class);
+        if (food != null) 
         {
+            carryingFood = true;
             setImage(image2);
             food.removeCrumb();
         }
-    
     }
     
     private boolean atHome()
@@ -63,19 +63,17 @@ public class Ant extends Creature
     {
         if (carryingFood)
         {
-            walkTowardsHome();
-      
+         walkTowardsHome();
         if (atHome())
-        {
-           setImage(image1);
-           carryingFood = false;
-         getHomeHill().countFood();
+          {
+            setImage(image1);
+            carryingFood = false;
+            getHomeHill().countFood();
+          }  
         }
-    }
-        else 
+         else 
         {
             searchForFood();
         }
-    
     }
 }
