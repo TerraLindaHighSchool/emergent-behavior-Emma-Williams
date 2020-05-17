@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
-
+import java.util.List;
 /**
  * The world where ants live.
  * 
@@ -14,6 +14,16 @@ public class AntWorld extends World
      * Create a new world. It will be initialised with a few ant hills
      * and food sources
      */
+    public void act()
+    {
+        List<Food> foods = getObjects(Food.class);
+        List<Pheromone> pheromones = getObjects(Pheromone.class);
+        if(foods.size()  == 0 && pheromones.size() == 0)
+       {
+         Greenfoot.stop();    
+       }
+    }
+     
     public AntWorld()
     {
         super(SIZE, SIZE, 1);
@@ -68,5 +78,36 @@ public class AntWorld extends World
         food2.setLocation(378,93);
         Food food12 = new Food();
         addObject(food12,378,93);
+        food3.setLocation(165,154);
+        food3.setLocation(236,178);
+        food.setLocation(545,544);
+        food.setLocation(545,515);
+        food5.setLocation(337,321);
+        food7.setLocation(92,539);
+        food4.setLocation(112,513);
+        food7.setLocation(106,525);
+        food8.setLocation(454,395);
+        food7.setLocation(88,513);
+        food4.setLocation(208,577);
+        food4.setLocation(76,437);
+        food2.setLocation(57,153);
+        food6.setLocation(93,34);
+        food2.setLocation(585,232);
+        food2.setLocation(240,48);
+        food2.setLocation(401,195);
+        food11.setLocation(591,190);
+        removeObject(food12);
+        removeObject(food10);
+        removeObject(food6);
+        removeObject(food7);
+        removeObject(food2);
+        food3.setLocation(176,163);
+        food3.setLocation(182,128);
+        removeObject(food9);
+        removeObject(food8);
+        food5.setLocation(346,320);
+        removeObject(food);
+        food5.setLocation(513,459);
+        food5.setLocation(410,354);
     }
 }

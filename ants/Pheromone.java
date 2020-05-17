@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * What ants use to mark a trail towards food.
  * 
  * @author Emma Williams
- * @version 5/7/20
+ * @version 5/14/20
  */
 public class Pheromone extends Actor
 {
@@ -21,7 +21,7 @@ public class Pheromone extends Actor
         intensity--;
         if(intensity <= 0)
         {
-            // to be implemented
+            getWorld().removeObject(this);
         }
         else
         {
@@ -35,6 +35,7 @@ public class Pheromone extends Actor
     public Pheromone()
     {
         intensity = MAX_INTENSITY;
+        updateImage();
     }
     
     public void updateImage()
